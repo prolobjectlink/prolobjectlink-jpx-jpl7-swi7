@@ -8,20 +8,18 @@ import org.logicware.jpi.jpl7.swi.SwiPrologProvider;
 
 public final class JPISWIContainers extends JPIContainers {
 
-    static final Containers instance = new JPISWIContainers();
+	static final Containers instance = new JPISWIContainers();
 
-    protected JPISWIContainers() {
-	super(new Properties(), new SwiPrologProvider());
-    }
+	protected JPISWIContainers() {
+		super(new Properties(), new SwiPrologProvider());
+	}
 
-    @Override
-    public Containers getInstance() {
-	return instance;
-    }
+	public Containers getInstance() {
+		return instance;
+	}
 
-    @Override
-    public ContainerFactory createContainerFactory() {
-	return new JPISWIContainerFactory(getProperties(), getProvider());
-    }
+	public ContainerFactory createContainerFactory() {
+		return new JPISWIContainerFactory(getProperties(), getProvider());
+	}
 
 }
