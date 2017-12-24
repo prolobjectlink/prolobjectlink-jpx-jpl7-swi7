@@ -8,22 +8,22 @@ import org.logicware.jpi.jpl7.JplProvider;
 
 public class SwiPrologProvider extends JplProvider implements PrologProvider {
 
-    public SwiPrologProvider() {
-	super(new SwiPrologConverter());
-    }
+	public SwiPrologProvider() {
+		super(new SwiPrologConverter());
+	}
 
-    public SwiPrologProvider(PrologConverter<Term> converter) {
-	super(converter);
-    }
+	public SwiPrologProvider(PrologConverter<Term> converter) {
+		super(converter);
+	}
 
-    @Override
-    public PrologEngine newEngine() {
-	return new SwiPrologEngine(this);
-    }
+	@Override
+	public PrologEngine newEngine() {
+		return new SwiPrologEngine(this);
+	}
 
-    @Override
-    public String toString() {
-	return "SwiPrologProvider [converter=" + converter + "]";
-    }
+	@Override
+	public String toString() {
+		return "SwiPrologProvider [converter=" + converter + "]";
+	}
 
 }

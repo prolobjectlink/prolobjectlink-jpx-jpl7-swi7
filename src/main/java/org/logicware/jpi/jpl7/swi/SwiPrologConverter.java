@@ -7,9 +7,8 @@ import org.logicware.jpi.jpl7.JplConverter;
 
 public class SwiPrologConverter extends JplConverter implements PrologConverter<Term> {
 
-    @Override
-    public PrologProvider createProvider() {
-	return new SwiPrologProvider(this);
-    }
+	public PrologProvider createProvider() {
+		return new SwiPrologProvider(this);
+	}
 
 }

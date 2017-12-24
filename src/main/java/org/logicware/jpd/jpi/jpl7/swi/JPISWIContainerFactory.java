@@ -8,20 +8,20 @@ import org.logicware.jpi.jpl7.swi.SwiPrologProvider;
 
 public final class JPISWIContainerFactory extends JPIContainerFactory {
 
-    public JPISWIContainerFactory() {
-	this(new Properties());
-    }
+	public JPISWIContainerFactory() {
+		this(new Properties());
+	}
 
-    public JPISWIContainerFactory(Properties properties) {
-	super(properties, new SwiPrologProvider());
-    }
+	public JPISWIContainerFactory(Properties properties) {
+		super(properties, new SwiPrologProvider());
+	}
 
-    public JPISWIContainerFactory(Properties properties, PrologProvider provider) {
-	super(properties, provider);
-    }
+	public JPISWIContainerFactory(Properties properties, PrologProvider provider) {
+		super(properties, provider);
+	}
 
-    public ContainerFactory createContainerFactory() {
-	return this;
-    }
+	public ContainerFactory createContainerFactory() {
+		return this;
+	}
 
 }

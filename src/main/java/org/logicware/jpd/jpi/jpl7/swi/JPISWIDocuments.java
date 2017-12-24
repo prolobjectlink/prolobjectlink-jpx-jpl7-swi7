@@ -10,24 +10,22 @@ import org.logicware.jpi.jpl7.swi.SwiPrologProvider;
 
 public final class JPISWIDocuments extends JPIDocuments {
 
-    static final Documents instance = new JPISWIDocuments();
+	static final Documents instance = new JPISWIDocuments();
 
-    protected JPISWIDocuments() {
-	super(new Properties(), new SwiPrologProvider());
-    }
+	protected JPISWIDocuments() {
+		super(new Properties(), new SwiPrologProvider());
+	}
 
-    @Override
-    public Documents getInstance() {
-	return instance;
-    }
+	public Documents getInstance() {
+		return instance;
+	}
 
-    public Cache createCache() {
-	return new JPICache(getProvider());
-    }
+	public Cache createCache() {
+		return new JPICache(getProvider());
+	}
 
-    @Override
-    public ContainerFactory createContainerFactory() {
-	return new JPISWIContainerFactory(getProperties(), getProvider());
-    }
+	public ContainerFactory createContainerFactory() {
+		return new JPISWIContainerFactory(getProperties(), getProvider());
+	}
 
 }
