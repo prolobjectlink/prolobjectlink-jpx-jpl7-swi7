@@ -4,15 +4,15 @@ import org.logicware.jpd.Cache;
 import org.logicware.jpd.ContainerFactory;
 import org.logicware.jpd.Documents;
 import org.logicware.jpd.Properties;
-import org.logicware.jpd.jpi.JPICache;
-import org.logicware.jpd.jpi.JPIDocuments;
+import org.logicware.jpd.jpi.PrologCache;
+import org.logicware.jpd.jpi.PrologDocuments;
 import org.logicware.jpi.jpl7.swi.SwiPrologProvider;
 
-public final class JPISWIDocuments extends JPIDocuments {
+public final class SWIDocuments extends PrologDocuments {
 
-	static final Documents instance = new JPISWIDocuments();
+	static final Documents instance = new SWIDocuments();
 
-	protected JPISWIDocuments() {
+	protected SWIDocuments() {
 		super(new Properties(), new SwiPrologProvider());
 	}
 
@@ -21,11 +21,11 @@ public final class JPISWIDocuments extends JPIDocuments {
 	}
 
 	public Cache createCache() {
-		return new JPICache(getProvider());
+		return new PrologCache(getProvider());
 	}
 
 	public ContainerFactory createContainerFactory() {
-		return new JPISWIContainerFactory(getProperties(), getProvider());
+		return new SWIContainerFactory(getProperties(), getProvider());
 	}
 
 }

@@ -3,14 +3,14 @@ package org.logicware.jpd.jpi.jpl7.swi;
 import org.logicware.jpd.ContainerFactory;
 import org.logicware.jpd.Containers;
 import org.logicware.jpd.Properties;
-import org.logicware.jpd.jpi.JPIContainers;
+import org.logicware.jpd.jpi.PrologContainers;
 import org.logicware.jpi.jpl7.swi.SwiPrologProvider;
 
-public final class JPISWIContainers extends JPIContainers {
+public final class SWIContainers extends PrologContainers {
 
-	static final Containers instance = new JPISWIContainers();
+	static final Containers instance = new SWIContainers();
 
-	protected JPISWIContainers() {
+	protected SWIContainers() {
 		super(new Properties(), new SwiPrologProvider());
 	}
 
@@ -19,7 +19,7 @@ public final class JPISWIContainers extends JPIContainers {
 	}
 
 	public ContainerFactory createContainerFactory() {
-		return new JPISWIContainerFactory(getProperties(), getProvider());
+		return new SWIContainerFactory(getProperties(), getProvider());
 	}
 
 }
