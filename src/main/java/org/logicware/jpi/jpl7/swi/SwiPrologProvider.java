@@ -16,7 +16,6 @@ public class SwiPrologProvider extends JplProvider implements PrologProvider {
 		super(converter);
 	}
 
-	@Override
 	public PrologEngine newEngine() {
 		return new SwiPrologEngine(this);
 	}

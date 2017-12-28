@@ -23,13 +23,16 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 	private static final String SWI_PROLOG = "swi-prolog.pl";
 	private static final String SWI_TEMP_FILE = "prolobjectlink-jpi-jpl7-swi.pl";
 
-	private static final String SWI_TEMP = TEMP + "/" + SWI_TEMP_FILE;
+	private static final String SWI_TEMP = temp + "/" + SWI_TEMP_FILE;
 	private static final String SWI_PROCEDURE = META_INF + "/" + SWI_PROLOG;
+
+	private static final String ENSURE_LOADED_OPEN = "ensure_loaded('";
+	private static final String ENSURE_LOADED_CLOSE_AND = "'),";
 
 	SwiPrologEngine(PrologProvider provider) {
 		super(provider);
-		InputStream in;
-		OutputStream out;
+		InputStream in = null;
+		OutputStream out = null;
 		try {
 			Thread thread = Thread.currentThread();
 			ClassLoader cl = thread.getContextClassLoader();
@@ -41,13 +44,28 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			if (in != null) {
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (out != null) {
+				try {
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	SwiPrologEngine(PrologProvider provider, String file) {
 		super(provider, file);
-		InputStream in;
-		OutputStream out;
+		InputStream in = null;
+		OutputStream out = null;
 		try {
 			Thread thread = Thread.currentThread();
 			ClassLoader cl = thread.getContextClassLoader();
@@ -59,14 +77,28 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally {
+			if (in != null) {
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (out != null) {
+				try {
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
-	@Override
 	public synchronized void abolish(String functor, int arity) {
 		query = new Query("" +
 
-				"ensure_loaded('" + SWI_TEMP + "')," +
+				ENSURE_LOADED_OPEN + SWI_TEMP + ENSURE_LOADED_CLOSE_AND +
 
 				"remove_all('" + location + "'," + functor + "," + arity + ")"
 
@@ -88,7 +120,7 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 		}
 		query = new Query("" +
 
-				"ensure_loaded('" + SWI_TEMP + "')," +
+				ENSURE_LOADED_OPEN + SWI_TEMP + ENSURE_LOADED_CLOSE_AND +
 
 				"add_clause('" + location + "'," + t + "," + h + "," + b + ")"
 
@@ -115,7 +147,7 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 	public synchronized void retract(Term t) {
 		query = new Query("" +
 
-				"ensure_loaded('" + SWI_TEMP + "')," +
+				ENSURE_LOADED_OPEN + SWI_TEMP + ENSURE_LOADED_CLOSE_AND +
 
 				"remove_clause('" + location + "'," + t + ")"
 
@@ -136,16 +168,15 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 		return query(stringQuery);
 	}
 
-	public Iterator<PrologClause> getProgramIterator() {
+	public Iterator<PrologClause> iterator() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public synchronized int getProgramSize() {
 		query = new Query(
 
-				"ensure_loaded('" + SWI_TEMP + "')," +
+				ENSURE_LOADED_OPEN + SWI_TEMP + ENSURE_LOADED_CLOSE_AND +
 
 						"program_size('" + location + "'," + KEY + ")"
 
