@@ -1,5 +1,7 @@
 package org.logicware.jpi.jpl7.swi;
 
+import static org.logicware.LoggerConstants.FILE_ERROR;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,6 +11,7 @@ import java.util.Iterator;
 
 import org.jpl7.Query;
 import org.jpl7.Term;
+import org.logicware.LoggerUtils;
 import org.logicware.jpi.PrologClause;
 import org.logicware.jpi.PrologEngine;
 import org.logicware.jpi.PrologProvider;
@@ -39,24 +42,24 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 			if (!(new File(SWI_PROCEDURE).exists())) {
 				in = cl.getResource(SWI_PROCEDURE).openStream();
 				out = new FileOutputStream(SWI_TEMP);
+				LoggerUtils.info(getClass(), SWI_TEMP);
 				copy(in, out);
-				System.out.println(SWI_TEMP);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
 		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
 				}
 			}
 			if (out != null) {
 				try {
 					out.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
 				}
 			}
 		}
@@ -72,24 +75,24 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 			if (!(new File(SWI_PROCEDURE).exists())) {
 				in = cl.getResource(SWI_PROCEDURE).openStream();
 				out = new FileOutputStream(SWI_TEMP);
+				LoggerUtils.info(getClass(), SWI_TEMP);
 				copy(in, out);
-				System.out.println(SWI_TEMP);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
-		}finally {
+			LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
 				}
 			}
 			if (out != null) {
 				try {
 					out.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
 				}
 			}
 		}
@@ -113,7 +116,8 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 
 	@Override
 	public synchronized void assertz(Term t) {
-		Term h = t, b = BODY;
+		Term h = t;
+		Term b = BODY;
 		if (t.hasFunctor(":-", 2)) {
 			h = t.arg(1);
 			b = t.arg(2);
@@ -130,7 +134,8 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 
 	@Override
 	public synchronized boolean clause(Term t) {
-		Term h = t, b = BODY;
+		Term h = t;
+		Term b = BODY;
 		if (t.hasFunctor(":-", 2)) {
 			h = t.arg(1);
 			b = t.arg(2);
@@ -160,12 +165,12 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 	}
 
 	public PrologQuery query(PrologTerm... terms) {
-		String stringQuery = "";
+		StringBuilder buffer = new StringBuilder();
 		int length = terms.length;
 		for (int i = 0; i < length; i++) {
-			stringQuery += i < length - 1 ? terms[i] + ", " : terms[i];
+			buffer.append(i < length - 1 ? terms[i] + ", " : terms[i]);
 		}
-		return query(stringQuery);
+		return query("" + buffer + "");
 	}
 
 	public Iterator<PrologClause> iterator() {
