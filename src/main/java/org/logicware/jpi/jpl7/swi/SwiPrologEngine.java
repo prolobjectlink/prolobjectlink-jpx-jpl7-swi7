@@ -1,6 +1,6 @@
 package org.logicware.jpi.jpl7.swi;
 
-import static org.logicware.LoggerConstants.FILE_ERROR;
+import static org.logicware.logging.LoggerConstants.IO_ERROR;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,7 +11,6 @@ import java.util.Iterator;
 
 import org.jpl7.Query;
 import org.jpl7.Term;
-import org.logicware.LoggerUtils;
 import org.logicware.jpi.PrologClause;
 import org.logicware.jpi.PrologEngine;
 import org.logicware.jpi.PrologProvider;
@@ -19,6 +18,7 @@ import org.logicware.jpi.PrologQuery;
 import org.logicware.jpi.PrologTerm;
 import org.logicware.jpi.jpl7.JplEngine;
 import org.logicware.jpi.jpl7.JplQuery;
+import org.logicware.logging.LoggerUtils;
 
 public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 
@@ -46,20 +46,20 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 				copy(in, out);
 			}
 		} catch (IOException e) {
-			LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+			LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException e) {
-					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+					LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 				}
 			}
 			if (out != null) {
 				try {
 					out.close();
 				} catch (IOException e) {
-					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+					LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 				}
 			}
 		}
@@ -79,20 +79,20 @@ public final class SwiPrologEngine extends JplEngine implements PrologEngine {
 				copy(in, out);
 			}
 		} catch (IOException e) {
-			LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+			LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 		} finally {
 			if (in != null) {
 				try {
 					in.close();
 				} catch (IOException e) {
-					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+					LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 				}
 			}
 			if (out != null) {
 				try {
 					out.close();
 				} catch (IOException e) {
-					LoggerUtils.error(JplEngine.class, FILE_ERROR + file, e);
+					LoggerUtils.error(JplEngine.class, IO_ERROR + file, e);
 				}
 			}
 		}
