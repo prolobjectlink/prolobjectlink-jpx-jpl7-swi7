@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.logicware</groupId>
-	<artifactId>prolobjectlink-jpl7-swi</artifactId>
+	<artifactId>prolobjectlink-db-jpl7-swi</artifactId>
 	<version>1.0.0</version>
-	<name>prolobjectlink-jpl7-swi</name>
+	<name>prolobjectlink-db-jpl7-swi</name>
 	<description>prolobjectlink-jpl7-swi</description>
 
 	<url>http://www.logicware.org</url>
@@ -52,14 +52,18 @@
 	</distributionManagement>
 
 	<properties>
-		<project.version>1.0.0</project.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.5</maven.compiler.source>
+		<maven.compiler.target>1.5</maven.compiler.target>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.logicware</groupId>
-			<artifactId>prolobjectlink-jpl7</artifactId>
-			<version>${project.version}</version>
+			<artifactId>prolobjectlink-db-jpl7</artifactId>
+			<version>[1.0.0, )</version>
 		</dependency>
 	</dependencies>
 </project>

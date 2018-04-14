@@ -1,9 +1,9 @@
-package org.logicware.jpi.jpl7.swi;
+package org.logicware.prolog.jpl7.swi;
 
 import org.jpl7.Term;
-import org.logicware.jpi.PrologConverter;
-import org.logicware.jpi.PrologProvider;
-import org.logicware.jpi.jpl7.JplConverter;
+import org.logicware.pdb.prolog.PrologConverter;
+import org.logicware.pdb.prolog.PrologProvider;
+import org.logicware.prolog.jpl7.JplConverter;
 
 public class SwiPrologConverter extends JplConverter implements PrologConverter<Term> {
 
