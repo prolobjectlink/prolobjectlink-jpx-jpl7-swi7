@@ -3,6 +3,7 @@ package org.logicware.prolog.jpl7.swi;
 import org.logicware.pdb.HierarchicalCache;
 import org.logicware.pdb.Settings;
 import org.logicware.pdb.prolog.PrologContainerFactory;
+import org.logicware.prolog.jpl7.swi7.SwiPrologProvider;
 
 public final class SwiPrologContainerFactory extends PrologContainerFactory {
 
