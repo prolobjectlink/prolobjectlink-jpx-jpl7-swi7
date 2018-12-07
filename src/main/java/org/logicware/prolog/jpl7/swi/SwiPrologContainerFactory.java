@@ -1,8 +1,8 @@
 package org.logicware.prolog.jpl7.swi;
 
-import org.logicware.pdb.HierarchicalCache;
-import org.logicware.pdb.Settings;
-import org.logicware.pdb.prolog.PrologContainerFactory;
+import org.logicware.database.HierarchicalCache;
+import org.logicware.database.Settings;
+import org.logicware.database.prolog.PrologContainerFactory;
 import org.logicware.prolog.jpl7.swi7.SwiProlog7;
 
 public final class SwiPrologContainerFactory extends PrologContainerFactory {
