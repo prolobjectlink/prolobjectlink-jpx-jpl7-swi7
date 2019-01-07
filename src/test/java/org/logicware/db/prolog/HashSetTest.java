@@ -1,6 +1,6 @@
 /*
  * #%L
- * prolobjectlink-jpd
+ * prolobjectlink-db-jpl7-swi
  * %%
  * Copyright (C) 2012 - 2017 WorkLogic Project
  * %%
