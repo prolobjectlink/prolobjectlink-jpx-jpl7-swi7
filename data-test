@@ -1,12 +1,13 @@
-'org.logicware.domain.geometry.Polygon'(triangle, 'org.logicware.domain.geometry.Segment'(ab, 'org.logicware.domain.geometry.Point'(a, 3,140000343322754), 'org.logicware.domain.geometry.Point'(b, 3,140000343322754)), 'org.logicware.domain.geometry.Segment'(bc, 'org.logicware.domain.geometry.Point'(b, 3,140000343322754), 'org.logicware.domain.geometry.Point'(c, 3,140000343322754)), 'org.logicware.domain.geometry.Segment'(ca, 'org.logicware.domain.geometry.Point'(c, 3,140000343322754), 'org.logicware.domain.geometry.Point'(a, 3,140000343322754))).
+'org.worklogic.domain.geometry.Point'(a, 3, 14).
+'org.worklogic.domain.geometry.Point'(b, 3, 14).
+'org.worklogic.domain.geometry.Point'(c, 3, 14).
+'org.worklogic.domain.geometry.Point'(d, 3, 14).
 
-'org.logicware.domain.geometry.Point'(a, 3,140000343322754).
-'org.logicware.domain.geometry.Point'(b, 3,140000343322754).
-'org.logicware.domain.geometry.Point'(c, 3,140000343322754).
-'org.logicware.domain.geometry.Point'(d, 3,140000343322754).
+'org.worklogic.domain.geometry.Segment'(ab, 'org.worklogic.domain.geometry.Point'(a, 3, 14), 'org.worklogic.domain.geometry.Point'(b, 3, 14)).
+'org.worklogic.domain.geometry.Segment'(bc, 'org.worklogic.domain.geometry.Point'(b, 3, 14), 'org.worklogic.domain.geometry.Point'(c, 3, 14)).
+'org.worklogic.domain.geometry.Segment'(ca, 'org.worklogic.domain.geometry.Point'(c, 3, 14), 'org.worklogic.domain.geometry.Point'(a, 3, 14)).
+'org.worklogic.domain.geometry.Segment'(cd, 'org.worklogic.domain.geometry.Point'(c, 3, 14), 'org.worklogic.domain.geometry.Point'(d, 3, 14)).
+'org.worklogic.domain.geometry.Segment'(da, 'org.worklogic.domain.geometry.Point'(d, 3, 14), 'org.worklogic.domain.geometry.Point'(a, 3, 14)).
 
-'org.logicware.domain.geometry.Segment'(ab, 'org.logicware.domain.geometry.Point'(a, 3,140000343322754), 'org.logicware.domain.geometry.Point'(b, 3,140000343322754)).
-'org.logicware.domain.geometry.Segment'(bc, 'org.logicware.domain.geometry.Point'(b, 3,140000343322754), 'org.logicware.domain.geometry.Point'(c, 3,140000343322754)).
-'org.logicware.domain.geometry.Segment'(ca, 'org.logicware.domain.geometry.Point'(c, 3,140000343322754), 'org.logicware.domain.geometry.Point'(a, 3,140000343322754)).
-'org.logicware.domain.geometry.Segment'(cd, 'org.logicware.domain.geometry.Point'(c, 3,140000343322754), 'org.logicware.domain.geometry.Point'(d, 3,140000343322754)).
-'org.logicware.domain.geometry.Segment'(da, 'org.logicware.domain.geometry.Point'(d, 3,140000343322754), 'org.logicware.domain.geometry.Point'(a, 3,140000343322754)).
+'org.worklogic.domain.geometry.Polygon'(triangle, 'org.worklogic.domain.geometry.Segment'(ab, 'org.worklogic.domain.geometry.Point'(a, 3, 14), 'org.worklogic.domain.geometry.Point'(b, 3, 14)), 'org.worklogic.domain.geometry.Segment'(bc, 'org.worklogic.domain.geometry.Point'(b, 3, 14), 'org.worklogic.domain.geometry.Point'(c, 3, 14)), 'org.worklogic.domain.geometry.Segment'(ca, 'org.worklogic.domain.geometry.Point'(c, 3, 14), 'org.worklogic.domain.geometry.Point'(a, 3, 14))).
+
