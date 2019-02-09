@@ -18,9 +18,8 @@
 
 	<licenses>
 		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
+			<name>Simplified BSD License</name>
+			<url>https://github.com/SWI-Prolog/swipl-devel/blob/master/LICENSE</url>
 		</license>
 	</licenses>
 
@@ -158,7 +157,7 @@
 					<canUpdateDescription>true</canUpdateDescription>
 					<failOnMissingHeader>true</failOnMissingHeader>
 					<acceptPomPackaging>true</acceptPomPackaging>
-					<licenseName>apache_v2</licenseName>
+					<licenseName>bsd_2</licenseName>
 					<addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
 					<roots>
 						<root>src/main</root>
