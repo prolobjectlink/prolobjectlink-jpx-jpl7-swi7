@@ -48,7 +48,6 @@ public class ProcedureQueryTest extends BaseTest {
 	private ProcedureQuery query;
 
 	@Test
-	@Ignore
 	public final void testhasNextAndnext() {
 
 		query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y").execute();
@@ -246,7 +245,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testGetSolution() {
 
 		query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y").execute();
@@ -322,7 +320,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testSetAndGetArgumentValueByName() {
 
 		// no arguments binding
@@ -358,7 +355,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testSetAndGetArgumentValueByPosition() {
 
 		// no arguments binding
