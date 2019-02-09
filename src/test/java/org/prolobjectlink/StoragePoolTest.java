@@ -1637,11 +1637,6 @@ public class StoragePoolTest extends BaseTest {
 		assertTrue(storagePool.contains(c));
 		assertTrue(storagePool.contains(d));
 
-		PrologEngine engine = storagePool.getEngine();
-		for (PrologClause prologClause : engine) {
-			System.out.println(prologClause);
-		}
-
 		assertTrue(storagePool.contains(Point.class.getName(), 3));
 		assertTrue(storagePool.contains(Segment.class.getName(), 3));
 		assertTrue(storagePool.contains(Polygon.class.getName(), 4));
