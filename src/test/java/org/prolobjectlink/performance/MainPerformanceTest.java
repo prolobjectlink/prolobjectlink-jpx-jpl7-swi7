@@ -56,7 +56,7 @@ public class MainPerformanceTest {
 	// protected static final Class<?> engine = SwiPrologProvider.class;
 	// protected static final Class<?> engine = ZPrologProvider.class;
 
-	protected static final PrologProvider prolog = Prolog.newProvider(engine);
+	protected static final PrologProvider prolog = Prolog.getProvider(engine);
 
 	public MainPerformanceTest() {
 	}

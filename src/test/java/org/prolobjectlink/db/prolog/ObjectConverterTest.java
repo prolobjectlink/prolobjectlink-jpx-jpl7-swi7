@@ -60,7 +60,7 @@ import org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
 public class ObjectConverterTest extends BaseTest {
 
 	protected static final Class<?> engine = SwiProlog7.class;
-	protected static final PrologProvider provider = Prolog.newProvider(engine);
+	protected static final PrologProvider provider = Prolog.getProvider(engine);
 	protected static final ObjectConverter<PrologTerm> converter = new PrologObjectConverter(provider);
 
 	@Test
