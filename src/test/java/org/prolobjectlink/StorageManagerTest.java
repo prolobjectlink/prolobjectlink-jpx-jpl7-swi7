@@ -765,7 +765,6 @@ public class StorageManagerTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testCreateProcedureQuery() {
 
 		storageManager.getTransaction().begin();

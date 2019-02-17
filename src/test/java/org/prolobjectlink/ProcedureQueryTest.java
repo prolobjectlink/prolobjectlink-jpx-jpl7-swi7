@@ -36,7 +36,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.prolobjectlink.db.ProcedureQuery;
 import org.prolobjectlink.domain.geometry.Point;
@@ -148,7 +147,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testSetAndGetMaxSolution() {
 
 		query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y").setMaxSolution(2)
@@ -185,7 +183,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testSetAndGetFirstResult() {
 
 		query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y").setFirstSolution(0)
@@ -277,7 +274,6 @@ public class ProcedureQueryTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public final void testGetSolutions() {
 
 		query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y").execute();

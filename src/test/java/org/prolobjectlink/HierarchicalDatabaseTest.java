@@ -675,7 +675,6 @@ public class HierarchicalDatabaseTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public void testCreateProcedureQuery() {
 
 		hdb.getTransaction().begin();

@@ -797,7 +797,6 @@ public class StoragePoolTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public void testCreateProcedureQuery() {
 
 		storagePool.getTransaction().begin();
