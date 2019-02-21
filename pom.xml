@@ -5,7 +5,7 @@
 	<groupId>org.prolobjectlink</groupId>
 	<artifactId>prolobjectlink-jpx-jpl7-swi7</artifactId>
 	<version>1.0.0</version>
-	<name>prolobjectlink-db-jpl7-swi</name>
+	<name>prolobjectlink-jpx-jpl7-swi7</name>
 	<description>prolobjectlink-jpl7-swi</description>
 
 	<url>https://github.com/prolobjectlink/${project.name}</url>
@@ -43,7 +43,7 @@
 		<developerConnection>scm:git:https://github.com/prolobjectlink/${project.name}.git</developerConnection>
 		<connection>scm:git:https://github.com/prolobjectlink/${project.name}.git</connection>
 		<url>https://github.com/prolobjectlink/${project.name}</url>
-		
+
 	</scm>
 
 	<ciManagement>
@@ -82,14 +82,19 @@
 	</properties>
 
 	<dependencies>
-	<dependency>
+		<dependency>
+			<groupId>org.prolobjectlink</groupId>
+			<artifactId>prolobjectlink-jpi-jpl7-swi7</artifactId>
+			<version>[1.0.0, )</version>
+		</dependency>
+		<dependency>
 			<groupId>org.prolobjectlink</groupId>
 			<artifactId>prolobjectlink-jpp</artifactId>
 			<version>[1.0.0, )</version>
 		</dependency>
 		<dependency>
 			<groupId>org.prolobjectlink</groupId>
-			<artifactId>prolobjectlink-jpi-jpl7-swi7</artifactId>
+			<artifactId>prolobjectlink-jps-jetty</artifactId>
 			<version>[1.0.0, )</version>
 		</dependency>
 		<dependency>
