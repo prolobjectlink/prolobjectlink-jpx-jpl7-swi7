@@ -1,60 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  #%L
-  prolobjectlink-jpx-jpl7-swi7
-  %%
-  Copyright (C) 2019 Prolobjectlink Project
-  %%
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions are met:
-  
-  1. Redistributions of source code must retain the above copyright notice,
-     this list of conditions and the following disclaimer.
-  2. Redistributions in binary form must reproduce the above copyright notice,
-     this list of conditions and the following disclaimer in the documentation
-     and/or other materials provided with the distribution.
-  
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE
-  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-  POSSIBILITY OF SUCH DAMAGE.
-  #L%
-  -->
+<!-- #%L prolobjectlink-jpx-jpl7-swi7 %% Copyright (C) 2019 Prolobjectlink 
+	Project %% Redistribution and use in source and binary forms, with or without 
+	modification, are permitted provided that the following conditions are met: 
+	1. Redistributions of source code must retain the above copyright notice, 
+	this list of conditions and the following disclaimer. 2. Redistributions 
+	in binary form must reproduce the above copyright notice, this list of conditions 
+	and the following disclaimer in the documentation and/or other materials 
+	provided with the distribution. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT 
+	HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, 
+	BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+	FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+	HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+	EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT 
+	OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+	INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, 
+	STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
+	ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+	OF SUCH DAMAGE. #L% -->
 
 <persistence version="2.0"
-	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
 
-	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="test"
+		transaction-type="RESOURCE_LOCAL">
 
 		<description>This is an implementation of JPA</description>
-		<provider>org.logicware.provider.TuPrologPersistenceProvider</provider>
+		<provider>org.prolobjectlink.provider.SwiPrologPersistenceProvider
+		</provider>
 
 		<jta-data-source>jdbc/sample</jta-data-source>
 
-		<class>org.logicware.model.Point</class>
-		<class>org.logicware.model.Segment</class>
-		<class>org.logicware.model.Polygon</class>
-		<class>org.logicware.model.Tetragon</class>
-		<class>org.logicware.model.Person</class>
-		<class>org.logicware.model.Department</class>
+		<class>org.prolobjectlink.domain.geometry.Point</class>
+		<class>org.prolobjectlink.domain.geometry.Segment</class>
+		<class>org.prolobjectlink.domain.geometry.Polygon</class>
+		<class>org.prolobjectlink.domain.geometry.Tetragon</class>
+		<class>org.prolobjectlink.domain.model.Person</class>
+		<class>org.prolobjectlink.domain.model.Employee</class>
+		<class>org.prolobjectlink.domain.model.Department</class>
+		<class>org.prolobjectlink.domain.model.Node</class>
 
 		<properties>
 
-			<property name="javax.persistence.jdbc.driver" value="org.logicware.jpa.JPADriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:prolobjectlink:store:data-test" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.prolobjectlink.prolog.jpl7.swi.SwiPrologContainerFactory" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:prolobjectlink:mempdb:~/test" />
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
 
 		</properties>
-		
+
 	</persistence-unit>
 </persistence>
