@@ -237,7 +237,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<mainClass>
-								org.prolobjectlink.prolog.jpl7.swi.SwiPrologDatabaseConsole
+								org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseConsole
 							</mainClass>
 						</manifest>
 						<manifestEntries>

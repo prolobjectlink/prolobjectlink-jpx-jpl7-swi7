@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  * #L%
  */
-package org.prolobjectlink.prolog.jpl7.swi;
+package org.prolobjectlink.db.prolog.jpl7.swi7;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

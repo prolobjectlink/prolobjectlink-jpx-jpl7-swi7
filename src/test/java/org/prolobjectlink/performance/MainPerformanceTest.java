@@ -31,10 +31,10 @@ package org.prolobjectlink.performance;
 import org.prolobjectlink.db.ContainerFactory;
 import org.prolobjectlink.db.Storage;
 import org.prolobjectlink.db.etc.Settings;
+import org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologContainerFactory;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.prolog.Prolog;
 import org.prolobjectlink.prolog.PrologProvider;
-import org.prolobjectlink.prolog.jpl7.swi.SwiPrologContainerFactory;
 import org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
 
 public class MainPerformanceTest {

@@ -43,7 +43,7 @@ import java.util.Properties;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.prolobjectlink.prolog.jpl7.swi.SwiPrologDatabaseConsole;
+import org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseConsole;
 
 public class DatabaseBinaryTest extends BaseTest {
 
