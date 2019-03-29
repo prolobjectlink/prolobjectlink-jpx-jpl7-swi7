@@ -18,8 +18,9 @@
 
 	<licenses>
 		<license>
-			<name>Simplified BSD License</name>
-			<url>https://github.com/SWI-Prolog/swipl-devel/blob/master/LICENSE</url>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
 		</license>
 	</licenses>
 
@@ -79,6 +80,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.5</maven.compiler.source>
 		<maven.compiler.target>1.5</maven.compiler.target>
+		<openjpa.version>2.4.3</openjpa.version>
 	</properties>
 
 	<dependencies>
@@ -101,6 +103,11 @@
 			<groupId>org.prolobjectlink</groupId>
 			<artifactId>prolobjectlink-jps-undertow</artifactId>
 			<version>[1.0.0, )</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openjpa</groupId>
+			<artifactId>openjpa</artifactId>
+			<version>${openjpa.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -305,42 +312,42 @@
 					</execution>
 				</executions>
 			</plugin>
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.jacoco</groupId> -->
-<!-- 				<artifactId>jacoco-maven-plugin</artifactId> -->
-<!-- 				<version>0.7.5.201505241946</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>prepare-agent</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>prepare-agent</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 					<execution> -->
-<!-- 						<id>report</id> -->
-<!-- 						<phase>prepare-package</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>report</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 					<execution> -->
-<!-- 						<id>post-unit-test</id> -->
-<!-- 						<phase>test</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>report</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<dataFile>target/jacoco.exec</dataFile> -->
-<!-- 							<outputDirectory>target/jacoco-ut</outputDirectory> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 				<configuration> -->
-<!-- 					<systemPropertyVariables> -->
-<!-- 						<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile> -->
-<!-- 					</systemPropertyVariables> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.jacoco</groupId> -->
+			<!-- <artifactId>jacoco-maven-plugin</artifactId> -->
+			<!-- <version>0.7.5.201505241946</version> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <id>prepare-agent</id> -->
+			<!-- <goals> -->
+			<!-- <goal>prepare-agent</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>report</id> -->
+			<!-- <phase>prepare-package</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>report</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>post-unit-test</id> -->
+			<!-- <phase>test</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>report</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <dataFile>target/jacoco.exec</dataFile> -->
+			<!-- <outputDirectory>target/jacoco-ut</outputDirectory> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- <configuration> -->
+			<!-- <systemPropertyVariables> -->
+			<!-- <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile> -->
+			<!-- </systemPropertyVariables> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
