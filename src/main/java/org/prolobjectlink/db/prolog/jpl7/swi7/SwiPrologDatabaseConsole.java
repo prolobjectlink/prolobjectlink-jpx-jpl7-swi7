@@ -37,7 +37,6 @@ import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
 import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
 import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
 import org.prolobjectlink.db.prolog.AbstractDatabaseConsole;
-import org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
 import org.prolobjectlink.web.platform.UndertowServerControl;
 import org.prolobjectlink.web.platform.UndertowWebServer;
 import org.prolobjectlink.web.platform.WebPlatformUtil;
@@ -54,7 +53,7 @@ import org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer;
 public class SwiPrologDatabaseConsole extends AbstractDatabaseConsole implements DatabaseConsole {
 
 	public SwiPrologDatabaseConsole() {
-		super(new SwiProlog7());
+		super(new SwiPrologDatabaseProvider());
 	}
 
 	public static void main(String[] args) {
