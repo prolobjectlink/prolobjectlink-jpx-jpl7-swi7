@@ -35,9 +35,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
-import org.junit.Ignore;
 import org.junit.Test;
-import org.prolobjectlink.GraphEdge;
 import org.prolobjectlink.db.DatabaseClass;
 import org.prolobjectlink.db.DatabaseFunction;
 import org.prolobjectlink.db.DatabaseSequence;
@@ -57,7 +55,6 @@ public class DatabaseSchemaTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public void testCompile() {
 		assertEquals(4, hschema.compile().size());
 		assertEquals(4, rschema.compile().size());
