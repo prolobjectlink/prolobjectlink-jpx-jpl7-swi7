@@ -39,7 +39,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.prolobjectlink.db.ObjectConverterFactory;
 import org.prolobjectlink.db.Predicate;
@@ -50,7 +49,6 @@ import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
 import org.prolobjectlink.domain.geometry.Tetragon;
-import org.prolobjectlink.prolog.PrologClause;
 import org.prolobjectlink.prolog.PrologEngine;
 
 public class StoragePoolTest extends BaseTest {

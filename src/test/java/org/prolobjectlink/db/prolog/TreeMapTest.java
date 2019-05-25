@@ -39,7 +39,6 @@ import java.util.HashMap;
 import java.util.Set;
 
 import org.junit.Test;
-import org.prolobjectlink.db.prolog.PrologTreeMap;
 
 public class TreeMapTest extends CollectionTest {
 
