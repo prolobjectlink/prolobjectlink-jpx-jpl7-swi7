@@ -88,4 +88,4 @@ matrix:
 
 cache:
   directories:
-- ~/.m2
+  - ~/.m2
