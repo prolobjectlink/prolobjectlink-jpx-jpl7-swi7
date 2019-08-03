@@ -67,10 +67,10 @@ before_install:
   - cd packages/jpl
   - ./configure
   - make
-  - export SWI_HOME=/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/swipl-7.6.4
+  - export SWI_HOME=/home/travis/build/prolobjectlink/prolobjectlink-jpi-jpl7-swi7/swipl-7.6.4
   - export PATH=$PATH:$SWI_HOME/bin
-  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/swipl-7.6.4/packages/jpl
-  - export CLASSPATH=$CLASSPATH:/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/swipl-7.6.4/packages/jpl/jpl.jar
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/travis/build/prolobjectlink/prolobjectlink-jpi-jpl7-swi7/swipl-7.6.4/packages/jpl
+  - export CLASSPATH=$CLASSPATH:/home/travis/build/prolobjectlink/prolobjectlink-jpi-jpl7-swi7/swipl-7.6.4/packages/jpl/jpl.jar
   - cd ..
   - cd ..
   - cd ..
