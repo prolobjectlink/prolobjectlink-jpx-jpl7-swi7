@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-java -classpath "$(pwd)/lib/*" org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7Console -g
+java -classpath "$(pwd)/lib/*" org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseConsole -g
