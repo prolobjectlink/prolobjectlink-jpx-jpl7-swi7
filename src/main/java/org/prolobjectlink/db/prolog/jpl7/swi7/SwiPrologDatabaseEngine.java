@@ -35,7 +35,7 @@ public class SwiPrologDatabaseEngine extends SwiProlog7Engine implements PrologD
 	}
 
 	public PrologProgrammer getProgrammer() {
-		return new SwiProlog7Programmer(getProvider());
+		return new SwiPrologProgrammer(getProvider());
 	}
 
 }
