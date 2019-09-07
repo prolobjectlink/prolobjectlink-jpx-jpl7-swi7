@@ -30,9 +30,9 @@ import org.prolobjectlink.prolog.PrologProvider;
  * @author Jose Zalacain
  * @since 1.0
  */
-public final class SwiProlog7Programmer extends AbstractProgrammer implements PrologProgrammer {
+public final class SwiPrologProgrammer extends AbstractProgrammer implements PrologProgrammer {
 
-	public SwiProlog7Programmer(PrologProvider provider) {
+	public SwiPrologProgrammer(PrologProvider provider) {
 		super(provider);
 	}
 
