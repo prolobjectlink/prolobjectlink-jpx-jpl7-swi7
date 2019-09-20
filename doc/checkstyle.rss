@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>prolobjectlink-jpx-jpl7-swi7 - Checkstyle report</title>
+    <link>https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7</link>
+    <description>prolobjectlink-jpx-jpl7-swi7 - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012 - 2019 Prolobjectlink Project</copyright>
+    <item>
+      <title>File: 7,
+             Errors: 203,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseProvider.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologDatabaseProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologHierarchicalCache.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologHierarchicalCache.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  24
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologPersistenceProvider.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologPersistenceProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseEngine.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologDatabaseEngine.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  18
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologContainerFactory.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologContainerFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologProgrammer.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologProgrammer.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  25
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl7-swi7/checkstyle.html#org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologDatabaseConsole.java">org/prolobjectlink/db/prolog/jpl7/swi7/SwiPrologDatabaseConsole.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
