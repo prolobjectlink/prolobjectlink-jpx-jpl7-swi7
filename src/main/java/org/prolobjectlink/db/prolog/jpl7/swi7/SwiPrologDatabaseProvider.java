@@ -21,7 +21,8 @@ package org.prolobjectlink.db.prolog.jpl7.swi7;
 
 import org.prolobjectlink.db.prolog.PrologDatabaseEngine;
 import org.prolobjectlink.db.prolog.PrologDatabaseProvider;
-import org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
+
+import io.github.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
 
 public class SwiPrologDatabaseProvider extends SwiProlog7 implements PrologDatabaseProvider {
 

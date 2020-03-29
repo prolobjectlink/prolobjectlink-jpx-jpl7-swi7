@@ -24,9 +24,10 @@ import org.prolobjectlink.db.Storage;
 import org.prolobjectlink.db.etc.Settings;
 import org.prolobjectlink.db.prolog.jpl7.swi7.SwiPrologContainerFactory;
 import org.prolobjectlink.domain.geometry.Point;
-import org.prolobjectlink.prolog.Prolog;
-import org.prolobjectlink.prolog.PrologProvider;
-import org.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
+
+import io.github.prolobjectlink.prolog.Prolog;
+import io.github.prolobjectlink.prolog.PrologProvider;
+import io.github.prolobjectlink.prolog.jpl7.swi7.SwiProlog7;
 
 public class MainPerformanceTest {
 
