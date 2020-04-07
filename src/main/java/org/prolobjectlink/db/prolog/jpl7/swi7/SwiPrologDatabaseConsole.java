@@ -4,17 +4,19 @@
  * %%
  * Copyright (C) 2019 Prolobjectlink Project
  * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation, either version 2.1 of the
+ * License, or (at your option) any later version.
  * 
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Lesser Public License for more details.
  * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * You should have received a copy of the GNU General Lesser Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/lgpl-2.1.html>.
  * #L%
  */
 package org.prolobjectlink.db.prolog.jpl7.swi7;
@@ -22,21 +24,21 @@ package org.prolobjectlink.db.prolog.jpl7.swi7;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.prolobjectlink.db.DatabaseConsole;
-import org.prolobjectlink.db.DatabaseServer;
-import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
-import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
-import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
-import org.prolobjectlink.db.prolog.AbstractDatabaseConsole;
-import org.prolobjectlink.web.application.GrizzlyModelGenerator;
-import org.prolobjectlink.web.application.ModelGenerator;
-import org.prolobjectlink.web.platform.GrizzlyServerControl;
-import org.prolobjectlink.web.platform.GrizzlyWebServer;
-import org.prolobjectlink.web.platform.WebPlatformUtil;
-import org.prolobjectlink.web.platform.WebServerControl;
-import org.prolobjectlink.web.platform.linux.grizzly.LinuxGrizzlyWebServer;
-import org.prolobjectlink.web.platform.macosx.grizzly.MacosxGrizzlyWebServer;
-import org.prolobjectlink.web.platform.win32.grizzly.Win32GrizzlyWebServer;
+import io.github.prolobjectlink.db.DatabaseConsole;
+import io.github.prolobjectlink.db.DatabaseServer;
+import io.github.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
+import io.github.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
+import io.github.prolobjectlink.db.platform.win32.Win32DatabaseServer;
+import io.github.prolobjectlink.db.prolog.AbstractDatabaseConsole;
+import io.github.prolobjectlink.web.application.GrizzlyModelGenerator;
+import io.github.prolobjectlink.web.application.ModelGenerator;
+import io.github.prolobjectlink.web.platform.GrizzlyServerControl;
+import io.github.prolobjectlink.web.platform.GrizzlyWebServer;
+import io.github.prolobjectlink.web.platform.WebPlatformUtil;
+import io.github.prolobjectlink.web.platform.WebServerControl;
+import io.github.prolobjectlink.web.platform.linux.grizzly.LinuxGrizzlyWebServer;
+import io.github.prolobjectlink.web.platform.macosx.grizzly.MacosxGrizzlyWebServer;
+import io.github.prolobjectlink.web.platform.win32.grizzly.Win32GrizzlyWebServer;
 
 /**
  * 
